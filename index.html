@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f8f2" />
+  <meta name="description" content="A calm, secure home for your team's everyday work." />
+  <title>Gather — Team workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+  <main id="app" aria-live="polite">
+    <section class="login-shell" id="login-screen">
+      <div class="login-art"><div class="art-mark">g.</div><div class="art-copy"><span class="eyebrow">A little more in sync</span><h1>Good work<br />happens <em>together.</em></h1><p>One thoughtful space for the people, plans, and progress behind your best work.</p></div><div class="art-foot"><span>TEAM WORKSPACE</span><span>01 — 07</span></div><div class="art-shape shape-one"></div><div class="art-shape shape-two"></div></div>
+      <div class="login-panel"><div class="login-mobile-mark">gather<span>.</span></div><div class="login-content"><span class="eyebrow">WELCOME BACK</span><h2>Make yourself<br />at home.</h2><p class="login-intro">Sign in to pick up where your team left off.</p><form id="login-form"><label>Email address<input name="email" type="email" autocomplete="username" placeholder="you@yourteam.com" required /></label><label>Password<input name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required /></label><button class="primary-button login-button" type="submit">Sign in <span>↗</span></button><p class="form-error" id="login-error" role="alert"></p></form><div class="login-help"><span>Need access?</span> Ask your workspace admin to invite you.</div><div class="login-bottom"><span>GATHER WORKSPACE</span><span>Private by design</span></div></div></div>
+    </section>
+
+    <section class="workspace" id="workspace" hidden>
+      <aside class="sidebar" id="sidebar">
+        <a href="#dashboard" class="brand"><span class="brand-icon">g</span><span>gather<span class="brand-dot">.</span></span></a>
+        <div class="workspace-picker"><span class="workspace-avatar" id="workspace-initial">S</span><span><strong id="workspace-name">Studio North</strong><small>Team workspace</small></span><span class="picker-chevron">⌄</span></div>
+        <div class="side-label">WORKSPACE</div>
+        <nav class="side-nav" aria-label="Workspace navigation">
+          <button class="nav-item active" data-page="dashboard"><span class="nav-icon">⌂</span>Overview</button>
+          <button class="nav-item" data-page="tasks"><span class="nav-icon">☑</span>To-dos<span class="nav-count" id="nav-task-count">0</span></button>
+          <button class="nav-item" data-page="reminders"><span class="nav-icon">◷</span>Reminders</button>
+          <button class="nav-item" data-page="meetings"><span class="nav-icon">▣</span>Meetings</button>
+          <button class="nav-item" data-page="files"><span class="nav-icon">▤</span>Shared files</button>
+          <button class="nav-item" data-page="updates"><span class="nav-icon">☷</span>Daily updates</button>
+          <button class="nav-item" data-page="goals"><span class="nav-icon">◎</span>Goals</button>
+        </nav>
+        <div class="side-bottom"><div class="side-label">YOUR TEAM</div><div class="team-avatars" id="team-avatars"></div><button class="team-link" data-page="members">View team <span>→</span></button><div class="sidebar-profile"><div class="avatar avatar-me" id="side-avatar">A</div><div class="profile-copy"><strong id="side-name">Team member</strong><small id="side-role">Member</small></div><button class="more-button" id="profile-menu" aria-label="Profile options">···</button><div class="profile-menu" id="profile-popover" hidden><button id="my-profile">My profile</button><button id="change-password">Change password</button><button id="signout">Sign out</button></div></div></div>
+      </aside>
+      <div class="main-column">
+        <header class="topbar"><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation">☰</button><div class="breadcrumb"><span id="breadcrumb-workspace">Studio North</span><span class="crumb-slash">/</span><strong id="page-name">Overview</strong></div><div class="top-actions"><div class="today-label" id="today-label"></div><button class="top-avatar" id="top-avatar" aria-label="Open profile">R</button></div></header>
+        <main class="page-content" id="page-content"></main>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden><section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section></div>
+  <script src="app.js"></script>
+</body>
+</html>
