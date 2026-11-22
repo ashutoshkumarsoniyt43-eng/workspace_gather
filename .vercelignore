@@ -1,0 +1,21 @@
+# Vercel Hobby allows up to 12 serverless functions. These route through api/index.js.
+api/avatar.js
+api/bootstrap.js
+api/change-password.js
+api/file-download.js
+api/files.js
+api/goals.js
+api/health.js
+api/invite.js
+api/login.js
+api/logout.js
+api/me.js
+api/meetings.js
+api/members.js
+api/profile-photo.js
+api/reminders.js
+api/reset-password.js
+api/settings.js
+api/tasks.js
+api/updates.js
+api/upload.js

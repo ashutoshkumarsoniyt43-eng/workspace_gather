@@ -27,7 +27,7 @@ The server binds to `127.0.0.1` by default. Keep it local for a personal prototy
 
 ## Deploy the workspace on Vercel with Supabase
 
-The files under `api/` are Vercel serverless endpoints. The local Python/SQLite server is for local use only; Vercel uses Supabase Postgres and its private Storage bucket.
+The files under `api/` are Vercel serverless endpoints. Vercel routes them through `api/index.js` to fit the Hobby plan's serverless function limit. The local Python/SQLite server is for local use only; Vercel uses Supabase Postgres and its private Storage bucket.
 
 1. Create a Supabase project.
 2. In its SQL Editor, run [`supabase/schema.sql`](supabase/schema.sql). This creates the workspace tables, enables row-level security, and creates the private file bucket.
